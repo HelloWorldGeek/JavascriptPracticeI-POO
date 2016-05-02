@@ -25,11 +25,9 @@ Animal.prototype.ActualizarEnergia = function(energia){
 }
 
 Animal.prototype.Comer = function(){
-	var energia = 6;
+	this.energia += 6;
 	console.log("Come\n");
-	return energia;
 }
-
 
 /*
 	Clase hija Perro
@@ -43,9 +41,8 @@ Perro.prototype = new Animal(this);
 Perro.prototype.constructor = Perro;
 
 Perro.prototype.Correr = function(){
-	var energia = -5;
-	console.log("Corre " + this.nombre + "\n");
-	return energia;
+	this.ActualizarEnergia(-5);
+	console.log("Corre el perro");
 }
 
 /*
@@ -57,18 +54,16 @@ function Loro(paramAnimal){
 }
 
 Loro.prototype = new Animal(this);
-Loro.prototype.constructor = Loro;
+oro.prototype.constructor = Loro;L
 
 Loro.prototype.Volar = function(){
-	var volar = -8;
+	this.ActualizarEnergia(-8);
 	console.log("Vuela " + this.nombre + "\n");
-	return volar;
 }
 
 Loro.prototype.Comer = function(){
-	var AumentarEnergia = 10;
+	this.ActualizarEnergia(10);
 	console.log("Come " + this.nombre + "\n");
-	return AumentarEnergia;
 }
 /*
 var newAnimal = new Animal(paramAnimal);
