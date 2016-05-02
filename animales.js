@@ -14,6 +14,7 @@ var animal1 = new Animal('Larry',10);
 console.log(animal1.info());
 
 function Perro(){
+
 }
 
 Perro.prototype = new Animal();
@@ -28,8 +29,7 @@ Perro.prototype.correr = function(){
 }
 
 
-var animal = new Animal('Jose', 15);
-Perro.correr();
+var animal = new Perro();
 
 
 function Loro(){
