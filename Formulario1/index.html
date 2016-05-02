@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<script src="main.js"></script>
+</head>
+<body>
+<h1> Registrar empleados</h1>
+<form action="http://example.com/login.php">
+	<label>First name:</label><br />
+	<input id="firstname" type="text" placeholder="Rata Nombre" name="firstname" /><br />
+	<label>Last name:</label><br />
+	<input id="lastname" type="text" placeholder="Rata Apellido" name="lastname" /><br />
+	<label>DNI:</label><br />
+	<input id="dni" type="number" placeholder="Rata DNI" name="dni" /><br />
+	<label>Telefono:</label><br />
+	<input id="telefono" type="number" placeholder="Rata Telefono" name="telefono" /><br />
+	<label>Direccion:</label><br />
+	<input id="direccion" type="text" placeholder="Rata Direction" name="direccion" /><br />
+	<input type="button" value="Registrar informacion" onClick="registrar(); return false;">	
+</form>
+
+<div id="lista_de_empleados">
+	
+</div>
+</body>
+</html>
