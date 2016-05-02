@@ -11,9 +11,9 @@ Figura.prototype.info = function() {
 
 function Triangulo(tipoDeTriangulo, cantidadDeLados,base,altura){
 	Figura.call(this, cantidadDeLados);
-	var getArea = (base*altura)/2;
 	this.tipoDeTriangulo = tipoDeTriangulo;
-	console.log("El area del Triangulo es: " + getArea);
+	this.base = base;
+	this.altura = altura;	
 }
 
 Triangulo.prototype = new Figura();
@@ -24,6 +24,11 @@ Triangulo.prototype.info = function(){
 	console.log("Este es un Triangulo");
 	console.log("*************************************");
 };
+
+Triangulo.prototype.getArea = function(){
+	var getArea = (this.base*this.altura)/2;
+	console.log("El area del Triangulo es: " + getArea);
+}
 
 
 //Función del Cuadrado
